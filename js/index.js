@@ -21,6 +21,7 @@ const siteContent = {
     "features-content":
       "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4": "About",
+    "about-img-src": "img/about.jpeg",
     "about-content":
       "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
@@ -54,20 +55,18 @@ let navParent = document.querySelector("nav");
 let navChild = document.querySelectorAll("nav a");
 
 navChild[0].textContent = siteContent["nav"]["nav-item-1"];
-navChild[0].style.color = "green";
 navChild[1].textContent = siteContent["nav"]["nav-item-2"];
-navChild[1].style.color = "green";
 navChild[2].textContent = siteContent["nav"]["nav-item-3"];
-navChild[2].style.color = "green";
 navChild[3].textContent = siteContent["nav"]["nav-item-4"];
-navChild[3].style.color = "green";
 navChild[4].textContent = siteContent["nav"]["nav-item-5"];
-navChild[4].style.color = "green";
 navChild[5].textContent = siteContent["nav"]["nav-item-6"];
-navChild[5].style.color = "green";
+navChild.forEach(element => {
+  element.style.color = "green";
+})
 
-let header = (document.querySelector(".cta h1").innerHTML =
-  "Dom <br> Is <br> Awesome");
+let header = (document.querySelector(".cta h1").textContent =
+  "Dom \n Is \n Awesome");
+  
 let headerImage = document
   .querySelector("#cta-img")
   .setAttribute("src", siteContent["cta"]["img-src"]);
